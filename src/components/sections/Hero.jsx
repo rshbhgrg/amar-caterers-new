@@ -25,7 +25,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-              One of Rajasthan's most trusted caterers, bringing perfect menus and 
+              One of India's most trusted caterers, bringing perfect menus and 
               unparalleled services to make your big occasion truly special.
             </p>
 

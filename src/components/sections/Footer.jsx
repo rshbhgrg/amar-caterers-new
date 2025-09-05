@@ -22,7 +22,7 @@ const Footer = () => {
   ];
 
   const serviceAreas = [
-    'Jaipur', 'Jodhpur', 'Udaipur', 'Ajmer', 'Kota', 'Bikaner', 'All Rajasthan'
+    'Delhi', 'Mumbai', 'Bangalore', 'Jaipur', 'Jodhpur', 'Udaipur', 'All India'
   ];
 
   const socialLinks = [
@@ -70,7 +70,7 @@ const Footer = () => {
             <p className="text-gray-400 mb-6">
               Your trusted partner for exceptional catering services. Making every event 
               memorable with delicious food and impeccable service since 1986. Owned by 
-              Mr. Jairaj Sabnani, we are one of Rajasthan's most trusted caterers.
+              Mr. Jairaj Sabnani, we are one of India's most trusted caterers.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (

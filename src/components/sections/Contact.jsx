@@ -81,7 +81,7 @@ const Contact = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ready to make your event memorable? Contact us today for a free consultation 
-            and custom quote tailored to your needs. Serving all across Rajasthan since 1986.
+            and custom quote tailored to your needs. Serving all across India since 1986.
           </p>
         </div>
 

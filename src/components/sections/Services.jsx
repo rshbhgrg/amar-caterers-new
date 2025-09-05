@@ -66,7 +66,7 @@ const Services = () => {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From grand weddings to intimate gatherings, we provide exceptional catering services 
-            tailored to your specific needs and preferences. Serving all across Rajasthan with 
+            tailored to your specific needs and preferences. Serving all across India with 
             our outdoor catering expertise since 1986.
           </p>
         </div>

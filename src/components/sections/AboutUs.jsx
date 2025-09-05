@@ -43,7 +43,7 @@ const AboutUs = () => {
             <div className="space-y-4 text-gray-600">
               <p className="text-lg leading-relaxed">
                 Amar Caterers, owned by Mr. Jairaj Sabnani, is one of the most trusted caterers 
-                in Rajasthan since 1986. With our long history of providing perfect menus and 
+                in India since 1986. With our long history of providing perfect menus and 
                 unparalleled services, we are the best choice for your big occasion.
               </p>
               <p className="leading-relaxed">

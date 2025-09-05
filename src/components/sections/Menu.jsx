@@ -6,8 +6,7 @@ const Menu = () => {
 
   const categories = [
     { id: 'starters', name: 'Starters', icon: Coffee },
-    { id: 'mainVeg', name: 'Main Course (Veg)', icon: Leaf },
-    { id: 'mainNonVeg', name: 'Main Course (Non-Veg)', icon: UtensilsCrossed },
+    { id: 'mainVeg', name: 'Main Course', icon: Leaf },
     { id: 'breads', name: 'Breads & Rice', icon: Pizza },
     { id: 'desserts', name: 'Desserts', icon: Cake },
     { id: 'beverages', name: 'Beverages', icon: Coffee }
@@ -17,10 +16,10 @@ const Menu = () => {
     starters: [
       { name: 'Paneer Tikka', description: 'Marinated cottage cheese grilled to perfection', veg: true, popular: true },
       { name: 'Veg Spring Rolls', description: 'Crispy rolls filled with seasoned vegetables', veg: true },
-      { name: 'Chicken Seekh Kebab', description: 'Minced chicken kebabs with aromatic spices', veg: false, popular: true },
       { name: 'Corn Cheese Balls', description: 'Golden fried cheese and corn balls', veg: true },
-      { name: 'Fish Amritsari', description: 'Batter fried fish with Indian spices', veg: false },
-      { name: 'Hara Bhara Kebab', description: 'Spinach and peas patties', veg: true }
+      { name: 'Hara Bhara Kebab', description: 'Spinach and peas patties', veg: true },
+      { name: 'Stuffed Mushrooms', description: 'Button mushrooms stuffed with spiced vegetables', veg: true },
+      { name: 'Aloo Tikki Chat', description: 'Crispy potato patties with chutneys', veg: true }
     ],
     mainVeg: [
       { name: 'Paneer Butter Masala', description: 'Cottage cheese in rich tomato gravy', veg: true, popular: true },
@@ -29,14 +28,6 @@ const Menu = () => {
       { name: 'Palak Paneer', description: 'Cottage cheese in spinach gravy', veg: true },
       { name: 'Malai Kofta', description: 'Vegetable dumplings in creamy gravy', veg: true, popular: true },
       { name: 'Chole Bhature', description: 'Spiced chickpeas with fluffy bread', veg: true }
-    ],
-    mainNonVeg: [
-      { name: 'Butter Chicken', description: 'Tender chicken in creamy tomato sauce', veg: false, popular: true },
-      { name: 'Mutton Rogan Josh', description: 'Aromatic Kashmiri mutton curry', veg: false },
-      { name: 'Chicken Biryani', description: 'Fragrant rice with marinated chicken', veg: false, popular: true },
-      { name: 'Fish Curry', description: 'Fresh fish in coconut-based curry', veg: false },
-      { name: 'Prawn Masala', description: 'Prawns in spicy onion-tomato gravy', veg: false },
-      { name: 'Egg Curry', description: 'Boiled eggs in flavorful curry', veg: false }
     ],
     breads: [
       { name: 'Butter Naan', description: 'Soft bread brushed with butter', veg: true },
@@ -76,8 +67,8 @@ const Menu = () => {
             Delicious Food Selection
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore our diverse menu featuring traditional Indian delicacies and international 
-            cuisines, all prepared with fresh ingredients and authentic flavors.
+            Explore our diverse menu featuring traditional Indian delicacies, 
+            all prepared with fresh ingredients and authentic flavors.
           </p>
         </div>
 
