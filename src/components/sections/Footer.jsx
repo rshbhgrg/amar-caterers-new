@@ -51,7 +51,7 @@ const Footer = () => (
 
     <div className="border-t border-gold-light/20">
       <div className="wrap flex flex-col justify-between gap-2 py-6 text-[.82rem] text-[#C9B89C] sm:flex-row">
-        <span>© {new Date().getFullYear()} Amar Caterers</span>
+        <span suppressHydrationWarning>© {new Date().getFullYear()} Amar Caterers</span>
         <span>Cooking since 1986</span>
       </div>
     </div>

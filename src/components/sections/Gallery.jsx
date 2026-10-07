@@ -2,27 +2,29 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Photo from '../ui/Photo';
 
+// w/h are the intrinsic sizes so the masonry reserves space before photos load.
 const galleryImages = [
-  { name: 'palace-entrance', alt: 'A palace driveway lined with floral arches and a painted geometric carpet' },
-  { name: 'guests-dining', alt: 'Guests being served at a table in a lit palace courtyard' },
-  { name: 'mousse', alt: 'Saffron mousse topped with berries and kiwi on white plates' },
-  { name: 'lit-counter', alt: 'An illuminated basket-shaped counter at a night event' },
-  { name: 'garden-table', alt: 'A dinner table under chandeliers and lanterns with red flowers' },
-  { name: 'blue-tent-bar', alt: 'A drinks counter under a blue tent on a lawn' },
-  { name: 'menu-card', alt: 'A guest reading a printed wedding menu card' },
-  { name: 'plated-dessert-gold', alt: 'A dessert with gold leaf on a gold-rimmed plate' },
-  { name: 'lawn-seating', alt: 'Gold chairs and tables set on a lawn at night, with staff standing by' },
-  { name: 'milk-cake-counter', alt: 'A dessert counter with milk cake in brass bowls' },
-  { name: 'tomato-salad', alt: 'A tomato rose salad display on a bed of greens' },
-  { name: 'chef-guest', alt: 'A chef serving a guest at a live counter' },
-  { name: 'salad-counter', alt: 'A salad and beans counter with fresh greens' },
-  { name: 'dry-fruits', alt: 'A chef’s gloved hand holding a bowl of spiced dry fruits' },
-  { name: 'hosts-2', alt: 'Hosts welcoming guests in a banquet hall' },
+  { name: 'palace-entrance', w: 1800, h: 1200, alt: 'A palace driveway lined with floral arches and a painted geometric carpet' },
+  { name: 'guests-dining', w: 720, h: 1280, alt: 'Guests being served at a table in a lit palace courtyard' },
+  { name: 'mousse', w: 1800, h: 1013, alt: 'Saffron mousse topped with berries and kiwi on white plates' },
+  { name: 'lit-counter', w: 720, h: 1280, alt: 'An illuminated basket-shaped counter at a night event' },
+  { name: 'garden-table', w: 720, h: 1280, alt: 'A dinner table under chandeliers and lanterns with red flowers' },
+  { name: 'blue-tent-bar', w: 1350, h: 1800, alt: 'A drinks counter under a blue tent on a lawn' },
+  { name: 'menu-card', w: 1013, h: 1800, alt: 'A guest reading a printed wedding menu card' },
+  { name: 'plated-dessert-gold', w: 720, h: 1280, alt: 'A dessert with gold leaf on a gold-rimmed plate' },
+  { name: 'lawn-seating', w: 1800, h: 1351, alt: 'Gold chairs and tables set on a lawn at night, with staff standing by' },
+  { name: 'milk-cake-counter', w: 720, h: 1280, alt: 'A dessert counter with milk cake in brass bowls' },
+  { name: 'tomato-salad', w: 1200, h: 1800, alt: 'A tomato rose salad display on a bed of greens' },
+  { name: 'chef-guest', w: 720, h: 1280, alt: 'A chef serving a guest at a live counter' },
+  { name: 'salad-counter', w: 720, h: 1280, alt: 'A salad and beans counter with fresh greens' },
+  { name: 'dry-fruits', w: 720, h: 1280, alt: 'A chef’s gloved hand holding a bowl of spiced dry fruits' },
+  { name: 'hosts-2', w: 1800, h: 1200, alt: 'Hosts welcoming guests in a banquet hall' },
 ];
 
 const Gallery = () => {
   const [selected, setSelected] = useState(null);
   const closeRef = useRef(null);
+  const dialogRef = useRef(null);
   const lastTrigger = useRef(null);
 
   const close = useCallback(() => {
@@ -41,6 +43,12 @@ const Gallery = () => {
       if (e.key === 'Escape') close();
       if (e.key === 'ArrowRight') step(1);
       if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'Tab') {
+        const buttons = [...dialogRef.current.querySelectorAll('button')];
+        const i = buttons.indexOf(document.activeElement);
+        e.preventDefault();
+        buttons[(i + (e.shiftKey ? -1 : 1) + buttons.length) % buttons.length].focus();
+      }
     };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
@@ -81,6 +89,8 @@ const Gallery = () => {
                 <Photo
                   name={img.name}
                   alt=""
+                  width={img.w}
+                  height={img.h}
                   sizes="(min-width: 768px) 30vw, 48vw"
                   className="h-auto transition-transform duration-500 group-hover:scale-[1.03]"
                 />
@@ -92,6 +102,7 @@ const Gallery = () => {
 
       {current && (
         <div
+          ref={dialogRef}
           role="dialog"
           aria-modal="true"
           aria-label="Photo viewer"
@@ -104,7 +115,7 @@ const Gallery = () => {
               alt={current.alt}
               className="max-h-[78vh] w-auto object-contain"
             />
-            <figcaption className="voice mt-4 max-w-[60ch] text-center text-[1.1rem] text-gold-light">
+            <figcaption aria-hidden="true" className="voice mt-4 max-w-[60ch] text-center text-[1.1rem] text-gold-light">
               {current.alt}
             </figcaption>
           </figure>

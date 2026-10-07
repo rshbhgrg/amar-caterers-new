@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 - `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for production
+- `npm run build` - Build for production: client build, SSR build of `src/entry-server.jsx`, then `scripts/prerender.js` bakes the rendered page into `dist/index.html` (the client hydrates it)
 - `npm run lint` - Run ESLint to check code quality
 - `npm run preview` - Preview production build locally
 
@@ -45,6 +45,13 @@ src/
 - Adding a photo: export both `name.webp` and `name-sm.webp` to `public/images/`, render with `<Photo name="..." alt="..." sizes="..." />`
 - Enquiry form has no backend: it opens WhatsApp with a pre-filled message (`whatsappLink` in `lib/contact.js`)
 - Content rule: don't add unverified stats, service areas or testimonials. Real contact details live in `lib/contact.js`
+
+### Deployment & SEO
+
+- Deployed on Vercel from `main` (`vercel.json` sets the build command and cache headers). Live at https://amar-caterers-new.vercel.app
+- The site URL is hard-coded in `index.html` (canonical, Open Graph, JSON-LD), `public/robots.txt` and `public/sitemap.xml`. Update all of them if a custom domain is added
+- Components must render the same on server and client (no `window`/`Date` in render output, or use `suppressHydrationWarning`)
+- `public/og-image.jpg` (1200x630) is the link preview for WhatsApp and social shares
 
 ## Key Dependencies
 

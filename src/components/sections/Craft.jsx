@@ -19,7 +19,7 @@ const principles = [
 const photos = [
   { name: 'chef-counter', alt: 'A chef in a toque preparing food at a counter during an evening event' },
   { name: 'chef-plating', alt: 'A chef plating food with tongs at a live station' },
-  { name: 'plated-dessert', alt: 'A plated dessert topped with cream and dried rose on a gold-rimmed plate' },
+  { name: 'chef-hands', alt: 'A gloved hand holding a freshly fried snack in front of a chef’s jacket' },
 ];
 
 const Craft = () => (

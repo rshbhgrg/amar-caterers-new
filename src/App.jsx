@@ -14,10 +14,11 @@ import Testimonials from './components/sections/Testimonials';
 import Process from './components/sections/Process';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
+import MobileActions from './components/sections/MobileActions';
 
 function App() {
   return (
-    <div className="min-h-screen overflow-x-clip">
+    <div className="min-h-screen overflow-x-clip pb-[calc(3.25rem+env(safe-area-inset-bottom))] lg:pb-0">
       <ArchDefs />
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[70] focus:bg-ivory focus:px-4 focus:py-2">
         Skip to content
@@ -38,6 +39,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <MobileActions />
     </div>
   );
 }

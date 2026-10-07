@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amar-caterers-new.vercel.app/sitemap.xml

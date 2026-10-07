@@ -105,7 +105,7 @@ const Contact = () => {
             </div>
             <div>
               <label htmlFor="date" className="label">Event date</label>
-              <input id="date" name="date" type="date" value={form.date} onChange={handleChange} className="field" />
+              <input id="date" name="date" type="date" onFocus={(e) => { e.target.min = new Date().toISOString().slice(0, 10); }} value={form.date} onChange={handleChange} className="field" />
             </div>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">

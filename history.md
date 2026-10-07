@@ -1,5 +1,22 @@
 # Project History
 
+## 2026-10-08 - SEO and polish pass
+
+### SEO
+- **Prerendering**: production HTML used to ship an empty `<div id="root">`, so crawlers and link previews (WhatsApp, Facebook) saw no content. The build now renders the page to static HTML (`src/entry-server.jsx` + `scripts/prerender.js`) and `main.jsx` hydrates it. Verified: hydrates without errors and the menu toggle works
+- **Head tags**: local-keyword title ("Vegetarian Wedding Caterers in Jodhpur"), new meta description, canonical, Open Graph and Twitter card, `lang="en-IN"`
+- **Structured data**: JSON-LD `FoodEstablishment` with address, phone, email, founding year, cuisines and area served
+- **New files**: `robots.txt`, `sitemap.xml` (with image entries), branded `og-image.jpg`, `apple-touch-icon.png`, `favicon-32.png`
+- **Caching**: `vercel.json` gives `/images/*` 7 days + stale-while-revalidate and hashed `/assets/*` a 1-year immutable cache (images were `max-age=0`)
+- Fixed the hero preload `imagesizes` to match the `<img sizes>` (it was mismatched, risking a double download); hero is `fetchpriority=high`
+
+### UX and accessibility
+- Phone-only bottom bar with Call and WhatsApp (`MobileActions.jsx`)
+- Gallery: intrinsic width/height so the masonry doesn't jump as photos load; lightbox traps focus; caption no longer read twice
+- Craft section: swapped a dessert photo that duplicated the hero for a chef's-hands shot
+- Enquiry date picker no longer allows past dates
+- Removed the unused `amar-caterers-logo.png` (714 KB, Gemini watermark)
+
 ## 2026-10-07 - Full redesign from client references + real event photos
 
 ### Inputs
