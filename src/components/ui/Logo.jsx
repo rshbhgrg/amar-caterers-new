@@ -1,32 +1,17 @@
 import React from 'react';
+import { cn } from '../../lib/utils';
 
-const Logo = ({ className = "", size = "default" }) => {
-  const sizeClasses = {
-    small: "w-8 h-8",
-    default: "w-12 h-12",
-    large: "w-16 h-16"
-  };
-
-  return (
-    <div className={`flex items-center ${className}`}>
-      {/* Logo Image */}
-      <img 
-        src="/amar-caterers-logo.png" 
-        alt="Amar Caterers Logo" 
-        className={`${sizeClasses[size]} mr-3`}
-      />
-      
-      {/* Text */}
-      <div className="flex flex-col">
-        <span className="text-2xl md:text-3xl font-bold text-amber-700">
-          Amar Caterers
-        </span>
-        <span className="text-xs md:text-sm text-amber-600 font-medium hidden sm:block">
-          The Perfect Solution for any Occasion
-        </span>
-      </div>
-    </div>
-  );
-};
+const Logo = ({ className, tone = 'dark' }) => (
+  <span
+    className={cn(
+      'font-display text-[1.45rem] leading-none font-semibold tracking-[.01em]',
+      tone === 'dark' ? 'text-wine-deep' : 'text-ivory',
+      className
+    )}
+  >
+    Amar{' '}
+    <span className={cn('font-medium italic', tone === 'dark' ? 'text-gold' : 'text-gold-light')}>Caterers</span>
+  </span>
+);
 
 export default Logo;

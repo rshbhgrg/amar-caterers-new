@@ -1,5 +1,27 @@
 # Project History
 
+## 2026-10-07 - Full redesign from client references + real event photos
+
+### Inputs
+- Client references: `amar-caterers (3).html` (preferred for font/style) and `amar-luxury-homepage.html`; content mixed from both
+- 47 event photos from the client's Google Drive folder (named by intended section: home, about, events, expertise, food, stalls, service, gallery, testimonials, trust)
+
+### What changed
+- **Design system**: Cormorant Garamond + Jost, ivory/cream/wine/gold palette from reference 1, as Tailwind v4 `@theme` tokens in `index.css`; added `gold-ink` for AA-contrast gold text
+- **Signature**: jharokha (Rajasthani arch) photo frame (`ui/ArchFrame.jsx`); the hero's gold outline draws once on load
+- **Photos**: 44 photos converted to WebP at 1800px + 800px (8.1 MB total, from 304 MB originals) in `public/images/`, served via `ui/Photo.jsx` with srcset
+- **Sections** (new order): Header, Hero ("Forty years. One standard."), PromiseBand, Story (coffee machines to dosa tawas to 1986 timeline), Occasions (6, photo-led), Food ("Quality you can taste", cuisines, dietary tags), LiveCounters (scrolling stall photo strip), Craft (menu approach + chefs), Standard (Quality/Taste/Consistency/Service), Gallery (masonry + keyboard lightbox), Testimonials, Process (4 steps), Contact, Footer
+- **Enquiry form** now opens WhatsApp with the details pre-filled (there was no backend; it used to only `console.log`)
+- **Contact details** centralised in `lib/contact.js` (real phones, Yahoo email, Sardarpura address, Google Maps link)
+- **Removed**: AboutUs, Services, Menu sections; unused Button.jsx (referenced an undefined `Slot`); Vite template assets; placeholder map, newsletter form, fake social links, fake review ratings, invented stats
+- New typographic wordmark replaces the navy/pink logo PNG (which also has a Gemini watermark); new wine/gold arch favicon
+
+### Deliberately left out / needs client confirmation
+- Reference 1's destination-weddings section (US/UK), "4,000+ events", "100,000+ guests", "minimum 50 guests" and "booked 9-14 months out", because none of these are verified
+- Testimonial quotes are placeholders adapted from reference 1 (TODO in `Testimonials.jsx`)
+- The founder in the origin story is not named. The footer keeps "Owned by Mr. Jairaj Sabnani" from the old site
+- Skipped photos: `services-2` (Starbucks branding), `stalls-2` (another vendor's branding), `stalls-7` (branded ice-cream cups)
+
 ## 2025-09-05 - Initial Project Analysis and CLAUDE.md Creation
 
 ### Analysis Conducted

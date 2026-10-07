@@ -1,95 +1,73 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import Logo from '../ui/Logo';
+
+const navItems = [
+  { label: 'Our story', href: '#story' },
+  { label: 'Occasions', href: '#occasions' },
+  { label: 'Food', href: '#food' },
+  { label: 'Live counters', href: '#counters' },
+  { label: 'Gallery', href: '#gallery' },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About Us', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Menu', href: '#menu' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
-  ];
-
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <div className="flex items-center">
-            <a href="#home">
-              <Logo />
-            </a>
-          </div>
+    <header className="sticky top-0 z-50 border-b border-line bg-ivory/90 backdrop-blur-md">
+      <div className="wrap flex h-16 items-center justify-between md:h-[4.5rem]">
+        <a href="#home" aria-label="Amar Caterers, back to top">
+          <Logo />
+        </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-gray-700 hover:text-amber-700 transition-colors font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:flex items-center space-x-4">
+        <nav className="hidden items-center gap-8 text-[.9rem] lg:flex" aria-label="Main">
+          {navItems.map((item) => (
             <a
-              href="tel:919414132868"
-              className="flex items-center gap-2 px-5 py-2.5 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition-colors"
+              key={item.href}
+              href={item.href}
+              className="relative py-1 text-ink/80 transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-[width] hover:text-ink hover:after:w-full"
             >
-              <Phone className="w-4 h-4" />
-              <span>Get Quote</span>
+              {item.label}
             </a>
-          </div>
+          ))}
+          <a href="#enquire" className="btn btn-primary">Enquire now</a>
+        </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div
-          className={cn(
-            "lg:hidden transition-all duration-300 ease-in-out",
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-          )}
+        <button
+          type="button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-nav"
+          className="-mr-2 px-2 py-2 text-[.8rem] font-medium tracking-[.12em] text-wine-deep lg:hidden"
         >
-          <nav className="py-4 space-y-2 border-t">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-700 rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-            <div className="pt-4 px-4">
-              <a
-                href="tel:919414132868"
-                className="flex items-center justify-center gap-2 w-full px-5 py-2.5 bg-amber-700 text-white rounded-lg hover:bg-amber-800 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Get Quote</span>
-              </a>
-            </div>
-          </nav>
-        </div>
+          {isMenuOpen ? 'CLOSE' : 'MENU'}
+        </button>
       </div>
+
+      <nav
+        id="mobile-nav"
+        aria-label="Main"
+        className={cn(
+          'overflow-hidden border-line transition-[max-height] duration-300 ease-out lg:hidden',
+          isMenuOpen ? 'max-h-[28rem] border-t' : 'max-h-0'
+        )}
+      >
+        <div className="wrap flex flex-col py-4">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="border-b border-line/70 py-3 font-display text-xl text-wine-deep"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a href="#enquire" onClick={() => setIsMenuOpen(false)} className="btn btn-primary mt-5">
+            Enquire now
+          </a>
+        </div>
+      </nav>
     </header>
   );
 };

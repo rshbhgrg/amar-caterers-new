@@ -1,1 +1,83 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ivory: #F7F1E6;
+  --color-cream: #EFE6D3;
+  --color-wine: #5A0F1F;
+  --color-wine-deep: #3D0A15;
+  --color-gold: #B8863B;
+  --color-gold-ink: #85601F;
+  --color-gold-light: #D9B679;
+  --color-ink: #26140F;
+  --color-body: #4A3A2C;
+  --color-muted: #6E5D48;
+  --color-line: #DCCFAF;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Jost", system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--color-gold-light); color: var(--color-wine-deep); }
+  :focus-visible { outline: 2px solid var(--color-wine-deep); outline-offset: 3px; }
+  button, [role="button"], a { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+}
+
+@layer components {
+  .wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 1.25rem; }
+  @media (min-width: 768px) { .wrap { padding-inline: 2rem; } }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: .65rem;
+    font-size: .72rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--color-gold-ink);
+  }
+  .eyebrow::before { content: ""; width: 1.25rem; height: 1px; background: currentColor; }
+
+  .h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(2rem, 3.6vw, 2.9rem); line-height: 1.08; letter-spacing: -.01em;
+    color: var(--color-wine-deep);
+  }
+  .h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; line-height: 1.25; color: var(--color-wine-deep); }
+  .voice { font-family: var(--font-display); font-style: italic; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: .8rem 1.5rem; font-size: .86rem; font-weight: 500; letter-spacing: .04em;
+    border: 1px solid transparent; border-radius: 1px;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn-primary { background: var(--color-wine-deep); color: var(--color-ivory); border-color: var(--color-wine-deep); }
+  .btn-primary:hover { background: var(--color-wine); }
+  .btn-ghost { color: var(--color-wine-deep); border-color: var(--color-gold); }
+  .btn-ghost:hover { background: var(--color-gold); color: var(--color-ivory); }
+  .btn-light { background: var(--color-ivory); color: var(--color-wine-deep); }
+  .btn-light:hover { background: var(--color-gold-light); }
+
+  .field {
+    width: 100%; padding: .75rem .9rem; background: var(--color-ivory);
+    border: 1px solid var(--color-line); border-radius: 1px; color: var(--color-ink); font-size: .95rem;
+  }
+  .field:focus { outline: none; border-color: var(--color-wine-deep); }
+  .label { display: block; margin-bottom: .45rem; font-size: .8rem; font-weight: 500; color: var(--color-muted); }
+}
+
+/* Jharokha arch: the outline draws once, then the photo settles in. */
+.arch-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: arch-draw 2.2s cubic-bezier(.65, 0, .35, 1) .2s forwards; }
+.arch-photo { opacity: 0; animation: arch-reveal 1.4s ease 1.1s forwards; }
+@keyframes arch-draw { to { stroke-dashoffset: 0; } }
+@keyframes arch-reveal { to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .arch-line, .arch-photo { animation: none; stroke-dashoffset: 0; opacity: 1; }
+}
