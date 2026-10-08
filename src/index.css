@@ -71,6 +71,21 @@
   .label { display: block; margin-bottom: .45rem; font-size: .8rem; font-weight: 500; color: var(--color-muted); }
 }
 
+/* Jaali: pierced-screen lattice on the wine bands, fading in from one side like a carved screen. */
+.jaali { position: relative; isolation: isolate; }
+.jaali::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23D9B679' stroke-width='1'%3E%3Ccircle cx='0' cy='0' r='24'/%3E%3Ccircle cx='48' cy='0' r='24'/%3E%3Ccircle cx='0' cy='48' r='24'/%3E%3Ccircle cx='48' cy='48' r='24'/%3E%3Ccircle cx='24' cy='24' r='24'/%3E%3Ccircle cx='24' cy='24' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 44px 44px;
+  opacity: .14;
+  -webkit-mask-image: linear-gradient(to left, #000, transparent 55%);
+  mask-image: linear-gradient(to left, #000, transparent 55%);
+}
+.jaali-left::before {
+  -webkit-mask-image: linear-gradient(to right, #000, transparent 50%);
+  mask-image: linear-gradient(to right, #000, transparent 50%);
+}
+
 /* Jharokha arch: the outline draws once, then the photo settles in. */
 .arch-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: arch-draw 2.2s cubic-bezier(.65, 0, .35, 1) .2s forwards; }
 .arch-photo { opacity: 0; animation: arch-reveal 1.4s ease 1.1s forwards; }

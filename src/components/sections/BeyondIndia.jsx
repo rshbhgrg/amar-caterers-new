@@ -16,7 +16,7 @@ const points = [
 ];
 
 const BeyondIndia = () => (
-  <section id="beyond-india" className="bg-wine-deep py-20 text-ivory md:py-28">
+  <section id="beyond-india" className="jaali bg-wine-deep py-20 text-ivory md:py-28">
     <div className="wrap">
       <div className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
         <div>

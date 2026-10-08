@@ -1,5 +1,12 @@
 # Project History
 
+## 2026-10-08 - Design touches (local preview, not committed yet)
+
+Three quiet additions inside the existing theme:
+- **Jaali texture**: the pierced-screen lattice from the counters in the photos, as a faint gold pattern on the wine bands (Promise, Live counters, Beyond India) that fades in from one side. CSS-only (`.jaali`, `.jaali-left` in `index.css`)
+- **Story drawings**: gold line drawings beside each timeline milestone (coffee urn, cone dosa on a tawa, the arch for 1986, a thali for today), on the same 48px grid and stroke as the arch outline
+- A sample menu card for "Our menus" was tried and dropped at the user's request
+
 ## 2026-10-08 - Reference content confirmed true; restored held-back facts
 
 User confirmed that everything in both reference HTMLs is accurate. Restored what had been left out or softened:

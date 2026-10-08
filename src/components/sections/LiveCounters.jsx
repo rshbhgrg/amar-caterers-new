@@ -19,7 +19,7 @@ const LiveCounters = () => {
   const scroll = (dir) => strip.current?.scrollBy({ left: dir * strip.current.clientWidth * 0.8, behavior: 'smooth' });
 
   return (
-    <section id="counters" className="bg-wine-deep py-20 text-ivory md:py-28">
+    <section id="counters" className="jaali jaali-left bg-wine-deep py-20 text-ivory md:py-28">
       <div className="wrap grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-20">
         <div>
           <p className="eyebrow text-gold-light">Live counters</p>
