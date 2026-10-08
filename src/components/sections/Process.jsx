@@ -1,8 +1,8 @@
 import React from 'react';
 
 const steps = [
-  { title: 'Tell us about your day', text: 'Share your dates, city, guest count and functions. We’ll call you back to talk it through.' },
-  { title: 'Taste before you decide', text: 'A tasting built around your preferences, your region and your guests’ dietary needs.' },
+  { title: 'Tell us about your day', text: 'Share your dates, city or country, guest count and functions. We respond within two business days.' },
+  { title: 'Taste before you decide', text: 'A private tasting built around your preferences, your region and your guests’ dietary needs.' },
   { title: 'Finalise the menu', text: 'Courses, live counters and service style, locked in for each function of the celebration.' },
   { title: 'We run the kitchen', text: 'Our team arrives early, cooks and serves on site, and clears up afterwards.' },
 ];

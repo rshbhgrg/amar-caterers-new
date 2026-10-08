@@ -26,7 +26,8 @@ src/
 ├── components/
 │   ├── ui/           # Logo (wordmark), Photo (srcset img), ArchFrame (jharokha arch clip + gold outline)
 │   └── sections/     # Header, Hero, PromiseBand, Story, Occasions, Food, LiveCounters,
-│                     # Craft, Standard, Gallery, Testimonials, Process, Contact, Footer
+│                     # Craft, Standard, BeyondIndia, Gallery, Testimonials, Process,
+│                     # Contact, Footer, MobileActions (phone-only call/WhatsApp bar)
 ├── lib/
 │   ├── utils.js      # cn() for className merging
 │   └── contact.js    # Phones, email, address, WhatsApp link builder (single source)
@@ -44,7 +45,7 @@ src/
 - Signature element: `ArchFrame` jharokha arch. Only the hero uses `animate` (gold outline draws once); respect `prefers-reduced-motion`
 - Adding a photo: export both `name.webp` and `name-sm.webp` to `public/images/`, render with `<Photo name="..." alt="..." sizes="..." />`
 - Enquiry form has no backend: it opens WhatsApp with a pre-filled message (`whatsappLink` in `lib/contact.js`)
-- Content rule: don't add unverified stats, service areas or testimonials. Real contact details live in `lib/contact.js`
+- Content rule: everything in the two client reference HTMLs (stats, testimonials, US/UK destination weddings, 50-guest minimum, 9–14 month booking, two-business-day reply) is confirmed true; anything beyond that needs client confirmation. Real contact details live in `lib/contact.js` (the references' email/phone were placeholders)
 
 ### Deployment & SEO
 

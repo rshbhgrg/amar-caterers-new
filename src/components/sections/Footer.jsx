@@ -8,6 +8,7 @@ const explore = [
   { name: 'Food', href: '#food' },
   { name: 'Live counters', href: '#counters' },
   { name: 'Our menus', href: '#menus' },
+  { name: 'Destination weddings', href: '#beyond-india' },
   { name: 'Gallery', href: '#gallery' },
 ];
 
@@ -17,8 +18,8 @@ const Footer = () => (
       <div>
         <Logo tone="light" className="text-[1.7rem]" />
         <p className="mt-4 max-w-[34ch] text-[.95rem] leading-[1.7]">
-          Exclusively vegetarian wedding and event catering from Jodhpur, serving across India since
-          1986. Owned by Mr. Jairaj Sabnani.
+          Exclusively vegetarian wedding and event catering from Jodhpur, serving across India and
+          abroad since 1986. Owned by Mr. Jairaj Sabnani.
         </p>
         <a href="#enquire" className="btn btn-light mt-7">Enquire now</a>
       </div>

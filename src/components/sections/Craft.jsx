@@ -8,7 +8,7 @@ const principles = [
   },
   {
     title: 'Tasted before it’s final',
-    text: 'Every menu is confirmed at a tasting, where dishes are adjusted for taste, spice level and dietary needs before the event.',
+    text: 'Every menu is confirmed in a private tasting, where dishes are adjusted for taste, spice level and dietary needs before the event.',
   },
   {
     title: 'Built around your guests',

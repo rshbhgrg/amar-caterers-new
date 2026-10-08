@@ -20,8 +20,8 @@ const milestones = [
   },
   {
     tag: 'Today',
-    title: 'Four decades on, same standard',
-    text: 'Cooking for weddings and celebrations across India, still run on the humility and ethics of day one.',
+    title: 'Thousands served, same standard',
+    text: 'Cooking for weddings across India and for Indian families abroad, still run on the humility and ethics of day one.',
   },
 ];
 
@@ -62,7 +62,7 @@ const Story = () => (
             <p>
               What has carried the name for forty years isn't a secret recipe. It's the values he
               started with: humility, and doing things the right way even when no one is checking.
-              Every plate we send out, for a grand wedding or a quiet family function, is held to
+              Every plate we send out, for a wedding of two thousand guests or a quiet family function, is held to
               the standard of that very first order.
             </p>
           </div>

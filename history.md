@@ -1,5 +1,29 @@
 # Project History
 
+## 2026-10-08 - Reference content confirmed true; restored held-back facts
+
+User confirmed that everything in both reference HTMLs is accurate. Restored what had been left out or softened:
+- **Testimonials**: replaced with reference 1's three exact quotes (Jaipur wedding, London destination wedding, three-generations client in Delhi). Removed a quote I had adapted myself, and the TODO
+- **Stats** (reference 1 trust strip) now in the Testimonials section: founded 1986, 4,000+ events, 100,000+ guests, 3 generations
+- **Contact facts**: service area "Pan-India, plus select US and UK destinations", 50-guest minimum, weddings booked 9–14 months out, reply within two business days
+- **Copy restored to reference wording**:
+  - Hero mentions Indian families abroad
+  - Story says "a wedding of two thousand guests", and the Today milestone is "Thousands served, same standard"
+  - Occasions back to reference 1's six (adds post-wedding brunch, plus "Corporate & birthdays"), with the "intimate haldi to two-thousand-guest reception" intro
+  - Beyond India says "hundreds of Indian weddings" and "cities across the US, the UK and beyond"
+  - Process step 1 says "respond within two business days", and the tastings are "private"
+- Dessert labels taken from photos made neutral ("Indian sweets, plated desserts"), since the references don't name them
+- The og:description now includes the event and guest counts
+- Still not used: reference 1's `hello@amarcaterers.com` and `+91 12345 67890` (its footer marks these as placeholders; the real details stay), and reference 2's "[X]" blanks
+
+## 2026-10-08 - Added "Beyond India" (destination weddings) section
+
+- The user asked for reference 1's "Beyond India" section; it had been left out because international catering wasn't confirmed
+- New `BeyondIndia.jsx` (wine band between Standard and Gallery): our team travels, local plus carried-in ingredients, logistics handled "in the US, the UK and beyond", and a closing line
+- Toned down reference 1's "hundreds of Indian weddings" to "have run Indian weddings for years" and dropped its 01/02/03 numbering (the points aren't a sequence)
+- Wired in: "Beyond India" nav link (fits at 1024px), "Destination weddings" footer link, footer blurb, Contact service area, form field "City or country"
+- SEO: meta description and JSON-LD `areaServed` now include the United States and United Kingdom
+
 ## 2026-10-08 - SEO and polish pass
 
 ### SEO

@@ -8,7 +8,7 @@ const cuisines = [
   { name: 'Gujarati', dishes: 'Thali-style, undhiyu, farsan' },
   { name: 'Mughlai', dishes: 'Paneer korma, vegetable biryani' },
   { name: 'Street food', dishes: 'Chaat, pani puri, kathi rolls' },
-  { name: 'Desserts', dishes: 'Rabri, kesar phirni, plated sweets' },
+  { name: 'Desserts', dishes: 'Indian sweets, plated desserts' },
 ];
 
 const dietary = ['100% vegetarian kitchen', 'Jain menu on request', 'No onion, no garlic on request'];
@@ -23,7 +23,7 @@ const Food = () => (
             <Photo name="cheesecake" alt="Squares of cheesecake plated on gold-rimmed china at a dessert counter" sizes="(min-width: 1024px) 34rem, 100vw" />
           </div>
           <div className="aspect-[4/5] overflow-hidden">
-            <Photo name="dessert-bowls" alt="Kesar phirni set in clay bowls on a brass platter" sizes="(min-width: 1024px) 17rem, 50vw" />
+            <Photo name="dessert-bowls" alt="A saffron milk dessert in clay bowls on a brass platter" sizes="(min-width: 1024px) 17rem, 50vw" />
           </div>
           <div className="aspect-[4/5] overflow-hidden">
             <Photo name="silver-sweets" alt="Silver-leaf sweets arranged on an ornate platter with small serving bowls" sizes="(min-width: 1024px) 17rem, 50vw" />

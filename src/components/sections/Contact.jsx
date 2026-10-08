@@ -45,8 +45,8 @@ const Contact = () => {
           <p className="eyebrow">Enquire</p>
           <h2 className="h2 mt-5">Planning an occasion? Let's talk.</h2>
           <p className="mt-6 max-w-[44ch] leading-[1.75] text-body">
-            Tell us the occasion, the city and roughly how many guests. We'll get back to you with
-            availability and next steps.
+            Tell us the occasion, the city or country, and roughly how many guests. We'll follow up
+            within two business days with availability.
           </p>
 
           <dl className="mt-10 space-y-5 text-[.95rem]">
@@ -80,7 +80,15 @@ const Contact = () => {
             </div>
             <div className="grid grid-cols-[6.5rem_1fr] gap-4">
               <dt className="text-gold-ink">Service area</dt>
-              <dd className="text-ink">Across India</dd>
+              <dd className="text-ink">Pan-India, plus select US and UK destinations</dd>
+            </div>
+            <div className="grid grid-cols-[6.5rem_1fr] gap-4">
+              <dt className="text-gold-ink">Minimum</dt>
+              <dd className="text-ink">50 guests for full-service catering</dd>
+            </div>
+            <div className="grid grid-cols-[6.5rem_1fr] gap-4">
+              <dt className="text-gold-ink">Booking</dt>
+              <dd className="text-ink">Wedding dates are booked 9–14 months out on average</dd>
             </div>
           </dl>
         </div>
@@ -114,8 +122,8 @@ const Contact = () => {
               <input id="guests" name="guests" type="number" min="1" inputMode="numeric" placeholder="e.g. 300" value={form.guests} onChange={handleChange} className="field" />
             </div>
             <div>
-              <label htmlFor="city" className="label">City</label>
-              <input id="city" name="city" placeholder="e.g. Jodhpur" value={form.city} onChange={handleChange} className="field" />
+              <label htmlFor="city" className="label">City or country</label>
+              <input id="city" name="city" placeholder="e.g. Jodhpur, or London, UK" value={form.city} onChange={handleChange} className="field" />
             </div>
           </div>
           <div>

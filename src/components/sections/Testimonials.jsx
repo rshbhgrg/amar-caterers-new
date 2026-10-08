@@ -1,20 +1,26 @@
 import React from 'react';
 import Photo from '../ui/Photo';
 
-// TODO(client): these quotes come from the reference draft. Replace with real client words before launch.
 const testimonials = [
   {
-    text: 'Two thousand guests over three days, and every single function ran exactly on time. That kind of discipline is rare.',
-    cite: 'Family of the bride, Jodhpur wedding',
+    text: 'Two thousand guests over three days and every single function ran exactly on time. That kind of discipline is rare.',
+    cite: 'Family of the bride, Jaipur wedding',
+  },
+  {
+    text: 'We got married in London and still wanted it to taste like home. Amar Caterers made that happen down to the last course.',
+    cite: 'Anika & Rohan, destination wedding, UK',
   },
   {
     text: 'They’ve cooked for three generations of our family now. That says everything about how they run things.',
-    cite: 'Longtime family client',
+    cite: 'Longtime family client, Delhi',
   },
-  {
-    text: 'Our guests still talk about the live dosa counter. Everything tasted like it had been made just for us.',
-    cite: 'Reception host, Jaipur',
-  },
+];
+
+const stats = [
+  { value: '1986', label: 'Founded' },
+  { value: '4,000+', label: 'Events catered' },
+  { value: '100,000+', label: 'Guests served' },
+  { value: '3', label: 'Generations of guests fed' },
 ];
 
 const Testimonials = () => (
@@ -40,6 +46,15 @@ const Testimonials = () => (
           ))}
         </div>
       </div>
+
+      <dl className="mt-16 grid grid-cols-2 gap-y-8 border-t border-line pt-10 md:grid-cols-4">
+        {stats.map((s) => (
+          <div key={s.label} className="flex flex-col-reverse gap-1.5 pr-4">
+            <dt className="text-[.88rem] text-muted">{s.label}</dt>
+            <dd className="font-display text-[2.4rem] leading-none font-medium text-wine-deep md:text-[2.8rem]">{s.value}</dd>
+          </div>
+        ))}
+      </dl>
     </div>
   </section>
 );

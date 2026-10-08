@@ -27,16 +27,16 @@ const occasions = [
     alt: 'Reception tables and a long buffet on a lawn lit by lanterns',
   },
   {
-    title: 'Corporate events',
-    text: 'Meetings, conferences and company milestones, catered with the same care as a wedding and scaled to the room.',
-    photo: 'banquet-lounge',
-    alt: 'A banquet hall lounge with low tables and floral centrepieces',
-  },
-  {
-    title: 'Family celebrations',
-    text: 'Birthdays, anniversaries and get-togethers, from a small lunch at home to a few hundred guests.',
+    title: 'Post-wedding brunch',
+    text: 'A lighter, unhurried spread for family gathered the morning after: regional breakfast counters and slow-cooked classics.',
     photo: 'day-counter',
     alt: 'A daytime counter under a white tent with hand-painted panels',
+  },
+  {
+    title: 'Corporate & birthdays',
+    text: 'Office celebrations, conferences and milestone birthdays get the same care as a wedding, scaled to the room and the occasion.',
+    photo: 'banquet-lounge',
+    alt: 'A banquet hall lounge with low tables and floral centrepieces',
   },
 ];
 
@@ -49,8 +49,8 @@ const Occasions = () => (
           <h2 className="h2 mt-5">For every occasion that matters</h2>
         </div>
         <p className="max-w-[52ch] text-[1.02rem] leading-[1.75] text-body">
-          Some occasions are intimate, some bring together hundreds, and some are simply about
-          gathering the people who matter. Each function gets its own menu, service style and team.
+          From an intimate haldi to a two-thousand-guest reception, each function gets its own menu,
+          service style and team.
         </p>
       </div>
 

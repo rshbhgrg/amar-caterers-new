@@ -12,8 +12,9 @@ const Hero = () => (
           <span className="block italic">One standard.</span>
         </h1>
         <p className="mt-7 max-w-[46ch] text-[1.08rem] leading-[1.7] text-body">
-          Amar Caterers has cooked for weddings and celebrations across India since 1986, and only
-          ever vegetarian. The kitchen has grown. What we won't compromise on hasn't changed once.
+          Amar Caterers has cooked for weddings and celebrations across India, and for Indian
+          families abroad, since 1986. Only ever vegetarian. The kitchen has grown. What we won't
+          compromise on hasn't changed once.
         </p>
         <div className="mt-9 flex flex-wrap gap-4">
           <a href="#enquire" className="btn btn-primary">Enquire now</a>

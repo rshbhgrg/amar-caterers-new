@@ -7,6 +7,7 @@ const navItems = [
   { label: 'Occasions', href: '#occasions' },
   { label: 'Food', href: '#food' },
   { label: 'Live counters', href: '#counters' },
+  { label: 'Beyond India', href: '#beyond-india' },
   { label: 'Gallery', href: '#gallery' },
 ];
 

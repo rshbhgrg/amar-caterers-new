@@ -9,6 +9,7 @@ import Food from './components/sections/Food';
 import LiveCounters from './components/sections/LiveCounters';
 import Craft from './components/sections/Craft';
 import Standard from './components/sections/Standard';
+import BeyondIndia from './components/sections/BeyondIndia';
 import Gallery from './components/sections/Gallery';
 import Testimonials from './components/sections/Testimonials';
 import Process from './components/sections/Process';
@@ -33,6 +34,7 @@ function App() {
         <LiveCounters />
         <Craft />
         <Standard />
+        <BeyondIndia />
         <Gallery />
         <Testimonials />
         <Process />
