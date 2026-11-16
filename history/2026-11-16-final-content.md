@@ -27,3 +27,12 @@ Also: header/footer nav, meta description, OG description, JSON-LD description, 
 
 ## Verification
 `npm run lint` clean, `npm run build` (incl. prerender) OK. Checked in Chrome on `vite preview`: every in-page `#` link resolves, no horizontal overflow, Hero/Stats/Occasions/Where sections render in existing theme.
+
+## 2026-11-16 — Mobile layout pass (branch `fix/mobile-layout`)
+Checked the live site in same-origin iframes at 320/360/375/414/640/768/1024/1280px: no horizontal overflow at any width. Fixed phone layout issues:
+- Hero: arch 14.5rem wide on phones (was 19rem) and tighter top spacing, so the headline shows on the first screen (h1 bottom ~573px at 375px wide).
+- Stats band: on phones each stat is one compact row (value left, label right) instead of a tall stack.
+- Four decades: the three chef photos sit in one row on phones (was ~1,500px of stacked full-width photos).
+- Where we've catered: city lists in two columns below `lg`.
+- Story heading: 20ch max below `lg` (16ch squeezed it on phones).
+- Contact: phone and email links get `py-1` so each tap target is >= 24px (was 23px).

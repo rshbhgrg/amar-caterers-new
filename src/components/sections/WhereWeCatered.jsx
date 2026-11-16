@@ -34,8 +34,8 @@ const WhereWeCatered = () => (
             <h3 className="font-display text-[1.3rem] font-semibold text-ivory">{r.title}</h3>
             <p className="mt-3 text-[.95rem] leading-[1.7] text-[#D8C8AE]">{r.text}</p>
             {r.places && (
-              <ul className="mt-4 space-y-1.5 text-[.92rem] text-gold-light">
-                {r.places.map((p) => <li key={p}>{p}</li>)}
+              <ul className="mt-4 columns-2 gap-6 text-[.92rem] text-gold-light lg:columns-1">
+                {r.places.map((p) => <li key={p} className="mb-1.5">{p}</li>)}
               </ul>
             )}
           </div>

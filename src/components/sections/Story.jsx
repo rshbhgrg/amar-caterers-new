@@ -75,7 +75,7 @@ const Story = () => (
       <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="eyebrow">Our story</p>
-          <h2 className="h2 mt-5 max-w-[16ch]">This wasn’t a business plan. It was a way to survive.</h2>
+          <h2 className="h2 mt-5 max-w-[20ch] lg:max-w-[16ch]">This wasn’t a business plan. It was a way to survive.</h2>
 
           <div className="mt-10 hidden max-w-[22rem] lg:block">
             <ArchFrame>

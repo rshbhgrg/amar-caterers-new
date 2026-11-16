@@ -28,15 +28,15 @@ const FourDecades = () => (
         </p>
       </div>
 
-      <div className="mt-14 grid gap-3 sm:grid-cols-3 md:gap-4">
+      <div className="mt-12 grid grid-cols-3 gap-2 sm:mt-14 sm:gap-3 md:gap-4">
         {photos.map((p, i) => (
           <div key={p.name} className={i === 1 ? 'aspect-[3/4] overflow-hidden sm:translate-y-8' : 'aspect-[3/4] overflow-hidden'}>
-            <Photo name={p.name} alt={p.alt} sizes="(min-width: 640px) 33vw, 100vw" />
+            <Photo name={p.name} alt={p.alt} sizes="33vw" />
           </div>
         ))}
       </div>
 
-      <dl className="mt-16 grid gap-y-8 border-t border-line pt-10 sm:mt-24 sm:grid-cols-3">
+      <dl className="mt-12 grid gap-y-6 border-t border-line pt-8 sm:mt-24 sm:grid-cols-3 sm:gap-y-8 sm:pt-10">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col-reverse gap-1.5 pr-4">
             <dt className="text-[.92rem] text-muted">{s.label}</dt>

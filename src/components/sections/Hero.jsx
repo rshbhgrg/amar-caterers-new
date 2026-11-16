@@ -4,7 +4,7 @@ import Photo from '../ui/Photo';
 
 const Hero = () => (
   <section id="home" className="overflow-hidden">
-    <div className="wrap grid items-center gap-14 pt-12 pb-20 md:pt-16 lg:grid-cols-[1.1fr_.9fr] lg:gap-20 lg:pt-20 lg:pb-28">
+    <div className="wrap grid items-center gap-9 pt-7 pb-16 sm:gap-14 sm:pt-12 sm:pb-20 md:pt-16 lg:grid-cols-[1.1fr_.9fr] lg:gap-20 lg:pt-20 lg:pb-28">
       <div className="order-2 lg:order-1">
         <p className="eyebrow">Jodhpur · since 1986</p>
         <h1 className="mt-6 font-display text-[clamp(3rem,7vw,5.6rem)] leading-[.98] font-medium tracking-[-.015em] text-wine-deep">
@@ -21,7 +21,7 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="order-1 mx-auto w-full max-w-[19rem] sm:max-w-[23rem] lg:order-2 lg:max-w-[26rem]">
+      <div className="order-1 mx-auto w-full max-w-[14.5rem] sm:max-w-[23rem] lg:order-2 lg:max-w-[26rem]">
         <ArchFrame animate>
           <Photo
             name="hero-dessert"
