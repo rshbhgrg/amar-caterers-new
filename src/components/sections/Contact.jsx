@@ -58,23 +58,23 @@ const Contact = () => {
           <dl className="mt-10 space-y-5 text-[.95rem]">
             <div className="grid grid-cols-[6.5rem_1fr] gap-4">
               <dt className="text-gold-ink">Mobile</dt>
-              <dd className="space-y-1">
+              <dd className="-my-1">
                 {contact.mobiles.map((m) => (
-                  <a key={m.tel} href={`tel:${m.tel}`} className="block text-ink hover:text-wine">{m.display}</a>
+                  <a key={m.tel} href={`tel:${m.tel}`} className="block py-1 text-ink hover:text-wine">{m.display}</a>
                 ))}
               </dd>
             </div>
             <div className="grid grid-cols-[6.5rem_1fr] gap-4">
               <dt className="text-gold-ink">Office</dt>
-              <dd className="space-y-1">
+              <dd className="-my-1">
                 {contact.landlines.map((m) => (
-                  <a key={m.tel} href={`tel:${m.tel}`} className="block text-ink hover:text-wine">{m.display}</a>
+                  <a key={m.tel} href={`tel:${m.tel}`} className="block py-1 text-ink hover:text-wine">{m.display}</a>
                 ))}
               </dd>
             </div>
             <div className="grid grid-cols-[6.5rem_1fr] gap-4">
               <dt className="text-gold-ink">Email</dt>
-              <dd><a href={`mailto:${contact.email}`} className="break-all text-ink hover:text-wine">{contact.email}</a></dd>
+              <dd className="-my-1"><a href={`mailto:${contact.email}`} className="inline-block break-all py-1 text-ink hover:text-wine">{contact.email}</a></dd>
             </div>
             <div className="grid grid-cols-[6.5rem_1fr] gap-4">
               <dt className="text-gold-ink">Kitchen</dt>
