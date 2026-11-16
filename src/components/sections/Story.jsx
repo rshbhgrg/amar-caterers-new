@@ -75,7 +75,7 @@ const Story = () => (
       <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <p className="eyebrow">Our story</p>
-          <h2 className="h2 mt-5 max-w-[16ch]">Four decades ago, it started with very little.</h2>
+          <h2 className="h2 mt-5 max-w-[16ch]">This wasn’t a business plan. It was a way to survive.</h2>
 
           <div className="mt-10 hidden max-w-[22rem] lg:block">
             <ArchFrame>
@@ -89,28 +89,26 @@ const Story = () => (
         </div>
 
         <div>
-          <p className="voice text-[1.5rem] leading-[1.45] text-wine-deep">
-            This wasn't a business plan. It was a way to survive.
-          </p>
-          <div className="mt-6 max-w-[62ch] space-y-5 text-[1.02rem] leading-[1.8] text-body">
+          <div className="max-w-[62ch] space-y-5 text-[1.02rem] leading-[1.8] text-body">
             <p>
-              Long before there was a name on a signboard, there was a young man renting out coffee
+              Long before there was a name on his own signboard, there was a young man renting out coffee
               machines, one event at a time, for whatever paid that week. There was no family business
               to inherit, no capital behind him, and no safety net if a week went badly.
             </p>
             <p>
               Slowly, the coffee machines became dosa tawas. More equipment, more events, more trust
               from people who hired him once and came back. In 1986, that patient climb became
-              Amar Caterers.
+              Amar Caterers, carrying the name of Amar, his father’s cold drinks shop.
             </p>
             <p>
-              What has carried the name for forty years isn't a secret recipe. It's the values he
-              started with: humility, and doing things the right way even when no one is checking.
-              Every plate we send out, for a wedding of two thousand guests or a quiet family function, is held to
-              the standard of that very first order.
+              Forty years on, we still measure every plate against the first order he ever filled. He
+              had no reputation to protect then, only one customer who might hire him again, and he
+              gave that order everything he had. We have never learned another way. A wedding for
+              2,000+ guests and a quiet family function get the same care, because for the people
+              sitting down, theirs is the only occasion that matters.
             </p>
           </div>
-          <p className="voice mt-7 text-[1.2rem] text-gold-ink">The standard hasn't moved. Only the scale has.</p>
+          <p className="voice mt-7 text-[1.2rem] text-gold-ink">The standard hasn’t moved. Only the scale has.</p>
 
           <ol className="mt-12 border-t border-line">
             {milestones.map((m) => (

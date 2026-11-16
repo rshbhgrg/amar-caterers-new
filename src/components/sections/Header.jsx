@@ -6,9 +6,9 @@ const navItems = [
   { label: 'Our story', href: '#story' },
   { label: 'Occasions', href: '#occasions' },
   { label: 'Food', href: '#food' },
-  { label: 'Live counters', href: '#counters' },
-  { label: 'Beyond India', href: '#beyond-india' },
+  { label: 'Our values', href: '#values' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'Where we cater', href: '#where' },
 ];
 
 const Header = () => {

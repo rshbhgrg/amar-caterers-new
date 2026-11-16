@@ -3,40 +3,28 @@ import Photo from '../ui/Photo';
 
 const occasions = [
   {
-    title: 'Mehndi & haldi',
-    text: 'Relaxed, colourful menus for a garden or courtyard: chaat counters, cold drinks and easy grazing food.',
-    photo: 'mehndi-lounge',
-    alt: 'A mehndi lounge with orange sofas under a striped pink canopy',
-  },
-  {
-    title: 'Sangeet',
-    text: 'Buffet and snack menus built to keep a dance floor going all night, served fast and served hot.',
-    photo: 'garden-dinner',
-    alt: 'A garden dinner set among palms and flowers at night',
-  },
-  {
-    title: 'Wedding ceremony',
-    text: 'Full multi-course spreads, plated or from live stations, timed around the rituals so nothing rushes the guests.',
-    photo: 'palace-courtyard',
-    alt: 'A palace courtyard dining setup seen through pink curtains',
-  },
-  {
-    title: 'Reception',
-    text: 'Formal plated or elaborate buffet service for the biggest gathering of the celebration, with a full front-of-house team.',
+    title: 'Weddings & celebrations',
+    text: 'From weddings and receptions to anniversaries and family celebrations.',
     photo: 'reception-lawn',
     alt: 'Reception tables and a long buffet on a lawn lit by lanterns',
   },
   {
-    title: 'Post-wedding brunch',
-    text: 'A lighter, unhurried spread for family gathered the morning after: regional breakfast counters and slow-cooked classics.',
-    photo: 'day-counter',
-    alt: 'A daytime counter under a white tent with hand-painted panels',
-  },
-  {
-    title: 'Corporate & birthdays',
-    text: 'Office celebrations, conferences and milestone birthdays get the same care as a wedding, scaled to the room and the occasion.',
+    title: 'Corporate events',
+    text: 'Catering for meetings, conferences, corporate gatherings and milestones.',
     photo: 'banquet-lounge',
     alt: 'A banquet hall lounge with low tables and floral centrepieces',
+  },
+  {
+    title: 'Social gatherings',
+    text: 'From smaller get-togethers to larger celebrations.',
+    photo: 'garden-dinner',
+    alt: 'A garden dinner set among palms and flowers at night',
+  },
+  {
+    title: 'Special occasions',
+    text: 'For occasions that don’t need a category — just good food and thoughtful catering.',
+    photo: 'mehndi-lounge',
+    alt: 'A lounge with orange sofas under a striped pink canopy',
   },
 ];
 
@@ -49,16 +37,16 @@ const Occasions = () => (
           <h2 className="h2 mt-5">For every occasion that matters</h2>
         </div>
         <p className="max-w-[52ch] text-[1.02rem] leading-[1.75] text-body">
-          From an intimate haldi to a two-thousand-guest reception, each function gets its own menu,
-          service style and team.
+          Every occasion is different. Some are intimate. Some bring together hundreds. All of them
+          deserve food and service shaped around the people gathering.
         </p>
       </div>
 
-      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-6">
         {occasions.map((o) => (
           <article key={o.title}>
             <div className="aspect-[4/3] overflow-hidden bg-cream">
-              <Photo name={o.photo} alt={o.alt} sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 100vw" />
+              <Photo name={o.photo} alt={o.alt} sizes="(min-width: 1024px) 18rem, (min-width: 640px) 45vw, 100vw" />
             </div>
             <h3 className="h3 mt-5">{o.title}</h3>
             <p className="mt-2 max-w-[40ch] text-[.95rem] leading-[1.65] text-muted">{o.text}</p>

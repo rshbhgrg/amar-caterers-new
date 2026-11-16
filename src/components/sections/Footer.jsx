@@ -6,10 +6,9 @@ const explore = [
   { name: 'Our story', href: '#story' },
   { name: 'Occasions', href: '#occasions' },
   { name: 'Food', href: '#food' },
-  { name: 'Live counters', href: '#counters' },
-  { name: 'Our menus', href: '#menus' },
-  { name: 'Destination weddings', href: '#beyond-india' },
+  { name: 'Our values', href: '#values' },
   { name: 'Gallery', href: '#gallery' },
+  { name: 'Where we’ve catered', href: '#where' },
 ];
 
 const Footer = () => (
@@ -18,8 +17,8 @@ const Footer = () => (
       <div>
         <Logo tone="light" className="text-[1.7rem]" />
         <p className="mt-4 max-w-[34ch] text-[.95rem] leading-[1.7]">
-          Exclusively vegetarian wedding and event catering from Jodhpur, serving across India and
-          abroad since 1986. Owned by Mr. Jairaj Sabnani.
+          Pure vegetarian catering for weddings, corporate events and family gatherings, from
+          Jodhpur, across India and abroad. Owned by Mr. Jairaj Sabnani.
         </p>
         <a href="#enquire" className="btn btn-light mt-7">Enquire now</a>
       </div>
@@ -53,7 +52,7 @@ const Footer = () => (
     <div className="border-t border-gold-light/20">
       <div className="wrap flex flex-col justify-between gap-2 py-6 text-[.82rem] text-[#C9B89C] sm:flex-row">
         <span suppressHydrationWarning>© {new Date().getFullYear()} Amar Caterers</span>
-        <span>Cooking since 1986</span>
+        <span>Pure vegetarian since 1986</span>
       </div>
     </div>
   </footer>

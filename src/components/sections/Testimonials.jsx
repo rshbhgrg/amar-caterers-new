@@ -16,20 +16,17 @@ const testimonials = [
   },
 ];
 
-const stats = [
-  { value: '1986', label: 'Founded' },
-  { value: '4,000+', label: 'Events catered' },
-  { value: '100,000+', label: 'Guests served' },
-  { value: '3', label: 'Generations of guests fed' },
-];
-
 const Testimonials = () => (
   <section id="trust" className="bg-cream py-20 md:py-28">
     <div className="wrap">
       <div className="grid gap-14 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <div>
-          <p className="eyebrow">Trusted for four decades</p>
-          <h2 className="h2 mt-5 max-w-[14ch]">What families tell us afterwards</h2>
+          <p className="eyebrow">What families say</p>
+          <h2 className="h2 mt-5 max-w-[14ch]">Trusted for four decades</h2>
+          <p className="mt-6 max-w-[48ch] leading-[1.75] text-body">
+            From weddings to corporate milestones, Amar has been part of occasions that matter to the
+            families and companies who hired us.
+          </p>
           <div className="mt-10 aspect-[4/3] overflow-hidden">
             <Photo name="hosts-1" alt="Hosts in shawls and suits greeting guests at an indoor event" sizes="(min-width: 1024px) 30rem, 100vw" />
           </div>
@@ -44,17 +41,10 @@ const Testimonials = () => (
               <figcaption className="mt-4 text-[.85rem] font-medium text-gold-ink">{t.cite}</figcaption>
             </figure>
           ))}
+          <a href="#enquire" className="btn btn-ghost mt-10 self-start">Talk to our team</a>
         </div>
       </div>
 
-      <dl className="mt-16 grid grid-cols-2 gap-y-8 border-t border-line pt-10 md:grid-cols-4">
-        {stats.map((s) => (
-          <div key={s.label} className="flex flex-col-reverse gap-1.5 pr-4">
-            <dt className="text-[.88rem] text-muted">{s.label}</dt>
-            <dd className="font-display text-[2.4rem] leading-none font-medium text-wine-deep md:text-[2.8rem]">{s.value}</dd>
-          </div>
-        ))}
-      </dl>
     </div>
   </section>
 );
