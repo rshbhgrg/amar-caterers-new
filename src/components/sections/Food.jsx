@@ -1,17 +1,14 @@
 import React from 'react';
 import Photo from '../ui/Photo';
 
-const cuisines = [
-  { name: 'Rajasthani', dishes: 'Dal baati churma, ker sangri' },
-  { name: 'Punjabi', dishes: 'Dal makhani, sarson da saag' },
-  { name: 'South Indian', dishes: 'Live dosa, idli, filter coffee' },
-  { name: 'Gujarati', dishes: 'Thali-style, undhiyu, farsan' },
-  { name: 'Mughlai', dishes: 'Paneer korma, vegetable biryani' },
-  { name: 'Street food', dishes: 'Chaat, pani puri, kathi rolls' },
-  { name: 'Desserts', dishes: 'Indian sweets, plated desserts' },
+const pillars = [
+  {
+    title: 'A menu matrix you choose from',
+    text: 'A clear structure for each meal, such as how many sabjis, dals and sweets, with the dishes picked to suit your occasion.',
+  },
+  { title: 'Craft in how we prepare it', text: 'Recipes refined, not reinvented, over forty years.' },
+  { title: 'Presence in how it’s served', text: 'Guests remember how they were made to feel, not just what was on the plate.' },
 ];
-
-const dietary = ['100% vegetarian kitchen', 'Jain menu on request', 'No onion, no garlic on request'];
 
 const Food = () => (
   <section id="food" className="bg-cream py-20 md:py-28">
@@ -32,31 +29,21 @@ const Food = () => (
 
         <div>
           <p className="eyebrow">Food</p>
-          <h2 className="h2 mt-5">Quality you can taste</h2>
-          <p className="voice mt-6 text-[1.4rem] leading-[1.45] text-wine-deep">
-            Exclusively vegetarian, always. When our name is on the food, it has to be something we
-            are proud to serve.
-          </p>
-          <p className="mt-5 max-w-[58ch] leading-[1.8] text-body">
-            Good catering starts with good food: the ingredients we choose, the way each dish is
-            prepared, and the care in how it is presented and served. We cook regional menus from
-            across India, and we build each one around your family and your guests.
+          <h2 className="h2 mt-5">Food and our menus</h2>
+          <p className="mt-6 max-w-[58ch] text-[1.05rem] leading-[1.8] text-body">
+            We cook entirely vegetarian — not as a limitation, but because it’s where our discipline
+            is most visible: no shortcuts, no substitutions, just flavour and richness built honestly,
+            from the base of every dal to the way each sweet is finished tableside.
           </p>
 
-          <ul className="mt-10 border-t border-line">
-            {cuisines.map((c) => (
-              <li key={c.name} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-line py-3.5">
-                <span className="font-display text-[1.15rem] font-semibold text-wine-deep">{c.name}</span>
-                <span className="text-[.88rem] text-gold-ink">{c.dishes}</span>
-              </li>
+          <dl className="mt-10 border-t border-line">
+            {pillars.map((p) => (
+              <div key={p.title} className="border-b border-line py-5">
+                <dt className="font-display text-[1.3rem] font-semibold text-wine-deep">{p.title}</dt>
+                <dd className="mt-1.5 text-[.95rem] leading-[1.65] text-muted">{p.text}</dd>
+              </div>
             ))}
-          </ul>
-
-          <ul className="mt-8 flex flex-wrap gap-2.5" aria-label="Dietary options">
-            {dietary.map((d) => (
-              <li key={d} className="border border-gold/60 px-3.5 py-1.5 text-[.82rem] text-wine-deep">{d}</li>
-            ))}
-          </ul>
+          </dl>
         </div>
       </div>
     </div>

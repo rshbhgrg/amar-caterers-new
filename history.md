@@ -1,5 +1,9 @@
 # Project History
 
+## 2026-11-16 - Client's final content applied
+
+Site copy replaced with the client's "final content" draft, keeping the existing design and the "Forty years. One standard." headline. New stats (40+ years, 5,000+ events, 10,00,000+ guests), revised Story, four occasions, Food and our menus, What four decades have taught us, What we believe, Where we've catered. Removed promise band, live counters, process and the min-guests/booking rows. Full notes: `history/2026-11-16-final-content.md`.
+
 ## 2026-10-08 - Design touches (local preview, not committed yet)
 
 Three quiet additions inside the existing theme:

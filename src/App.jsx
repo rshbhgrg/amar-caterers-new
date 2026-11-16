@@ -2,17 +2,15 @@ import React from 'react';
 import { ArchDefs } from './components/ui/ArchFrame';
 import Header from './components/sections/Header';
 import Hero from './components/sections/Hero';
-import PromiseBand from './components/sections/PromiseBand';
+import StatsBand from './components/sections/StatsBand';
+import FourDecades from './components/sections/FourDecades';
+import Values from './components/sections/Values';
+import WhereWeCatered from './components/sections/WhereWeCatered';
 import Story from './components/sections/Story';
 import Occasions from './components/sections/Occasions';
 import Food from './components/sections/Food';
-import LiveCounters from './components/sections/LiveCounters';
-import Craft from './components/sections/Craft';
-import Standard from './components/sections/Standard';
-import BeyondIndia from './components/sections/BeyondIndia';
 import Gallery from './components/sections/Gallery';
 import Testimonials from './components/sections/Testimonials';
-import Process from './components/sections/Process';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 import MobileActions from './components/sections/MobileActions';
@@ -27,17 +25,15 @@ function App() {
       <Header />
       <main id="main">
         <Hero />
-        <PromiseBand />
+        <StatsBand />
         <Story />
         <Occasions />
         <Food />
-        <LiveCounters />
-        <Craft />
-        <Standard />
-        <BeyondIndia />
-        <Gallery />
+        <FourDecades />
+        <Values />
         <Testimonials />
-        <Process />
+        <Gallery />
+        <WhereWeCatered />
         <Contact />
       </main>
       <Footer />

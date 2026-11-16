@@ -69,12 +69,15 @@ const Gallery = () => {
             <h2 className="h2 mt-5">A glimpse of Amar</h2>
           </div>
           <p className="max-w-[52ch] text-[1.02rem] leading-[1.75] text-body">
-            Food, celebrations and gatherings from recent events, and the work that goes into
-            bringing them together.
+            Four decades of occasions. A few moments from them.
           </p>
         </div>
 
-        <ul className="mt-14 columns-2 gap-3 md:columns-3 md:gap-4">
+        <p className="voice mt-8 text-[1.15rem] text-gold-ink">
+          Wedding feasts · Live counters · Mithai · Corporate events · Plating · Gatherings
+        </p>
+
+        <ul className="mt-10 columns-2 gap-3 md:columns-3 md:gap-4">
           {galleryImages.map((img, i) => (
             <li key={img.name} className="mb-3 break-inside-avoid md:mb-4">
               <button
